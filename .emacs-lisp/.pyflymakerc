@@ -1,0 +1,19 @@
+# # run unit tests only when checks are forced or buffer saved
+# if TRIGGER_TYPE in ('save', 'force'):
+#     TEST_RUNNER_COMMAND = 'nosetests'
+#     TEST_RUNNER_FLAGS = [
+#         '--verbosity=0',
+#         '--with-machineout',
+#         '--machine-output']
+
+# # run unit tests only up to the first failure when buffer is saved
+# if TRIGGER_TYPE == 'save':
+#     TEST_RUNNER_FLAGS.append('-x')
+
+# # run PyLint on open, save and forced-checks
+# PYLINT = TRIGGER_TYPE != 'edit'
+
+# # don't ignore any messages when a check was forced
+# if TRIGGER_TYPE == 'force':
+#     USE_SANE_DEFAULTS = False
+#     IGNORE_CODES = ()
