@@ -10,6 +10,8 @@
     status = auto
     ui = auto
 [alias]
+    svnd = svn dcommit
+    svnr = svn rebase
     st = status
     ci = commit
     co = checkout
