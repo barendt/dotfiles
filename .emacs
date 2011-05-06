@@ -64,3 +64,13 @@
                              "~/org-mode-files/designteam.org"
                              "~/org-mode-files/somis.org"
                              "~/org-mode-files/randomreminders.org"))
+
+(add-hook 'php-mode-hook
+          '(lambda ()
+             (progn
+               (setq case-fold-search t)
+               (c-set-offset 'arglist-intro '+)
+               (c-set-offset 'arglist-close '0)
+               (set (make-local-variable 'c-basic-offset) 4)
+               (setq indent-tabs-mode nil)
+               )))
