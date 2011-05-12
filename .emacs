@@ -50,6 +50,9 @@
 (setq auto-mode-alist  (cons '(".rb$" . ruby-mode) auto-mode-alist))
 (setq auto-mode-alist  (cons '(".rhtml$" . html-mode) auto-mode-alist))
 
+(add-to-list 'auto-mode-alist '("\\.js\\'" . javascript-mode))
+(autoload 'javascript-mode "javascript" nil t)
+
 (add-to-list 'auto-mode-alist '("\\.org$" . org-mode))
 (define-key global-map "\C-cl" 'org-store-link)
 (define-key global-map "\C-ca" 'org-agenda)
