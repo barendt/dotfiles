@@ -1,6 +1,8 @@
 ;; Add ~/emacs-lisp to load-path
 (setq load-path (cons "~/.emacs-lisp" load-path))
 
+(define-key key-translation-map [?\C-h] [?\C-?])
+
 ;; Display line an dcolumn numbers
 (setq line-number-mode    t)
 (setq column-number-mode  t)
