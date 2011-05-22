@@ -1,3 +1,5 @@
+. ~/bin/bash_colors.sh
+
 MKL_NUM_THREADS=1
 export MKL_NUM_THREADS
 
