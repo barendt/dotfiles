@@ -12,6 +12,8 @@ PATH="/Users/barendt/Dropbox/scripts/bash:${PATH}"
 export PATH
 
 export VISUAL="emacs"
+export SVN_EDITOR="emacs"
+export EDITOR="emacs"
 
 [[ -s "/Users/barendt/.rvm/scripts/rvm" ]] && source "/Users/barendt/.rvm/scripts/rvm"  # This loads RVM into a shell session.
 
