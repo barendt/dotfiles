@@ -8,9 +8,6 @@ export MKL_NUM_THREADS
 PATH="/Library/Frameworks/Python.framework/Versions/Current/bin:${PATH}"
 export PATH
 
-PATH="/Users/barendt/Dropbox/scripts/bash:${PATH}"
-export PATH
-
 export VISUAL="emacs"
 export SVN_EDITOR="emacs"
 export EDITOR="emacs"
