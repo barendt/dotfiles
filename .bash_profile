@@ -8,10 +8,9 @@ export MKL_NUM_THREADS
 PATH="/Library/Frameworks/Python.framework/Versions/Current/bin:${PATH}"
 export PATH
 
-PATH="/Users/barendt/Dropbox/scripts/bash:${PATH}"
-export PATH
-
 export VISUAL="emacs"
+export SVN_EDITOR="emacs"
+export EDITOR="emacs"
 
 [[ -s "/Users/barendt/.rvm/scripts/rvm" ]] && source "/Users/barendt/.rvm/scripts/rvm"  # This loads RVM into a shell session.
 
@@ -44,7 +43,6 @@ PS1="\h:\W\$(barendt_git_prompt) \u\$ "
 gd() { git diff $* | view -; }
 gdc() { gd --cached $*; }
 alias pygrep="grep --include='*.py' $*"
-alias rbgrep="grep --include='*.rb' $*"
 
 
 source ~/bin/git-completion.bash
