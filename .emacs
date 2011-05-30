@@ -81,3 +81,6 @@
 (require 'auto-complete-config)
 (add-to-list 'ac-dictionary-directories "~/.emacs-lisp/autocomplete//ac-dict")
 (ac-config-default)
+
+;; Don't disable upcase-region
+(put 'upcase-region 'disabled nil)
