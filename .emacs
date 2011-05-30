@@ -76,3 +76,8 @@
 (require 'yasnippet)
 (yas/initialize)
 (yas/load-directory "~/.emacs-lisp/yasnippet-0.6.1c")
+
+(add-to-list 'load-path "~/.emacs-lisp/autocomplete/")
+(require 'auto-complete-config)
+(add-to-list 'ac-dictionary-directories "~/.emacs-lisp/autocomplete//ac-dict")
+(ac-config-default)
