@@ -59,13 +59,6 @@
 (define-key global-map "\C-cl" 'org-store-link)
 (define-key global-map "\C-ca" 'org-agenda)
 (setq org-log-done t)
-(setq org-directory "~/org")
-(setq org-mobile-inbox-for-pull "~/org/flagged.org")
-(setq org-mobile-directory "~/Dropbox/MobileOrg")
-(setq org-agenda-files (list "~/org-mode-files/todo.org"
-                             "~/org-mode-files/designteam.org"
-                             "~/org-mode-files/somis.org"
-                             "~/org-mode-files/randomreminders.org"))
 
 (add-hook 'php-mode-hook
           '(lambda ()
