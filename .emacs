@@ -70,12 +70,12 @@
                (setq indent-tabs-mode nil)
                )))
 
-;; yasnippet
-(add-to-list 'load-path
-             "~/.emacs-lisp/yasnippet-0.6.1c")
-(require 'yasnippet)
-(yas/initialize)
-(yas/load-directory "~/.emacs-lisp/yasnippet-0.6.1c")
+;; ;; yasnippet
+;; (add-to-list 'load-path
+;;              "~/.emacs-lisp/yasnippet-0.6.1c")
+;; (require 'yasnippet)
+;; (yas/initialize)
+;; (yas/load-directory "~/.emacs-lisp/yasnippet-0.6.1c")
 
 (add-to-list 'load-path "~/.emacs-lisp/autocomplete/")
 (require 'auto-complete-config)
