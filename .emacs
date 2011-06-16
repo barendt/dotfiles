@@ -84,3 +84,4 @@
 
 ;; Don't disable upcase-region
 (put 'upcase-region 'disabled nil)
+(put 'downcase-region 'disabled nil)
