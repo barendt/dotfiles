@@ -5,7 +5,7 @@ export MKL_NUM_THREADS
 
 # Setting PATH for EPD
 # The orginal version is saved in .bash_profile.pysave
-PATH="/Library/Frameworks/Python.framework/Versions/Current/bin:${PATH}"
+PATH="/usr/local/git/bin:/Library/Frameworks/Python.framework/Versions/Current/bin:${PATH}"
 export PATH
 
 export VISUAL="emacs"
