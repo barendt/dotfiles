@@ -35,7 +35,7 @@ barendt_git_prompt() {
         fi
         local SINCE_LAST_COMMIT="$(minutes_since_last_commit)m"
         # The __git_ps1 function inserts the current git branch where %s is
-        local GIT_PROMPT=`__git_ps1 "(%s|${SINCE_LAST_COMMIT})"`
+        local GIT_PROMPT=`__git_ps1 "(%s)"`
         echo ${GIT_PROMPT}
     fi
 }
