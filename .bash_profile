@@ -43,6 +43,8 @@ PS1="\h:\W\$(barendt_git_prompt) \u\$ "
 gd() { git diff $* | view -; }
 gdc() { gd --cached $*; }
 alias pygrep="grep --include='*.py' $*"
-
-
 source ~/bin/git-completion.bash
+
+function wigrep() {
+    find . -name \*.inc -print0 | xargs -0 grep "$1"
+}
