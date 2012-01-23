@@ -1,8 +1,6 @@
 [user]
-    name = Greg Barendt
-    email = barendt@mail.med.upenn.edu
-[core]
-    editor = emacs
+	name = Greg Barendt
+	email = github@gregbarendt.com
 [color]
     branch = auto
     diff = auto

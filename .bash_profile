@@ -8,11 +8,17 @@ export MKL_NUM_THREADS
 PATH="/Library/Frameworks/Python.framework/Versions/Current/bin:${PATH}"
 export PATH
 
-export VISUAL="emacs"
-export SVN_EDITOR="emacs"
-export EDITOR="emacs"
-
-[[ -s "/Users/barendt/.rvm/scripts/rvm" ]] && source "/Users/barendt/.rvm/scripts/rvm"  # This loads RVM into a shell session.
+# Use Textmate if it is installed
+if [ -d /Applications/TextMate2.app ]; then
+	export EDITOR="$HOME/bin/mate -w"
+	export GIT_EDITOR="$HOME/bin/mate -w"
+	export SVN_EDITOR="$HOME/bin/mate -w"
+	export VISUAL="$HOME/bin/mate -w"
+else
+	export VISUAL="emacs"
+	export SVN_EDITOR="emacs"
+	export EDITOR="emacs"
+fi
 
 # Got the next bit from https://github.com/garybernhardt/dotfiles/blob/master/.bashrc
 function minutes_since_last_commit {
@@ -46,3 +52,19 @@ alias pygrep="grep --include='*.py' $*"
 
 
 source ~/bin/git-completion.bash
+
+# Setting PATH for Python 3.2
+# The orginal version is saved in .bash_profile.pysave
+PATH="/Library/Frameworks/Python.framework/Versions/3.2/bin:${PATH}"
+export PATH
+
+# Setting PATH for EPD-7.0-1
+# The orginal version is saved in .bash_profile.pysave
+PATH="/Library/Frameworks/Python.framework/Versions/Current/bin:${PATH}"
+export PATH
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"  # Load RVM into a shell session *as a function*
+
+export DYLD_LIBRARY_PATH="/usr/local/oracle/instantclient_10_2"
+export SQLPATH="/usr/local/oracle/instantclient_10_2"
+export NLS_LANG="AMERICAN_AMERICA.UTF8"
+export PATH=$PATH:$DYLD_LIBRARY_PATH
