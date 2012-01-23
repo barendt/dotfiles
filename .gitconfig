@@ -9,6 +9,7 @@
     ui = auto
 [alias]
     svnd = svn dcommit
+    svni = svn info
     svnr = svn rebase
     st = status
     ci = commit
@@ -29,6 +30,7 @@
     gn = goodness
     gnc = goodness --cached
     fa = fetch --all
+    unstage = reset HEAD
 
 [format]
     pretty=format:%C(yellow)%h%Creset -%C(red)%d%Creset %s %Cgreen(%ar) %C(bold blue)<%an>%Creset

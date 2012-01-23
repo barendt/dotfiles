@@ -5,7 +5,7 @@ export MKL_NUM_THREADS
 
 # Setting PATH for EPD
 # The orginal version is saved in .bash_profile.pysave
-PATH="/Library/Frameworks/Python.framework/Versions/Current/bin:${PATH}"
+PATH="/usr/local/git/bin:/Library/Frameworks/Python.framework/Versions/Current/bin:${PATH}"
 export PATH
 
 # Use Textmate if it is installed
@@ -41,7 +41,7 @@ barendt_git_prompt() {
         fi
         local SINCE_LAST_COMMIT="$(minutes_since_last_commit)m"
         # The __git_ps1 function inserts the current git branch where %s is
-        local GIT_PROMPT=`__git_ps1 "(%s|${SINCE_LAST_COMMIT})"`
+        local GIT_PROMPT=`__git_ps1 "(%s)"`
         echo ${GIT_PROMPT}
     fi
 }
@@ -49,22 +49,8 @@ PS1="\h:\W\$(barendt_git_prompt) \u\$ "
 gd() { git diff $* | view -; }
 gdc() { gd --cached $*; }
 alias pygrep="grep --include='*.py' $*"
-
-
 source ~/bin/git-completion.bash
 
-# Setting PATH for Python 3.2
-# The orginal version is saved in .bash_profile.pysave
-PATH="/Library/Frameworks/Python.framework/Versions/3.2/bin:${PATH}"
-export PATH
-
-# Setting PATH for EPD-7.0-1
-# The orginal version is saved in .bash_profile.pysave
-PATH="/Library/Frameworks/Python.framework/Versions/Current/bin:${PATH}"
-export PATH
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"  # Load RVM into a shell session *as a function*
-
-export DYLD_LIBRARY_PATH="/usr/local/oracle/instantclient_10_2"
-export SQLPATH="/usr/local/oracle/instantclient_10_2"
-export NLS_LANG="AMERICAN_AMERICA.UTF8"
-export PATH=$PATH:$DYLD_LIBRARY_PATH
+function wigrep() {
+    find . -name \*.inc -print0 | xargs -0 grep "$1"
+}

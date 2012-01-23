@@ -85,3 +85,6 @@
 ;; Don't disable upcase-region
 (put 'upcase-region 'disabled nil)
 (put 'downcase-region 'disabled nil)
+
+;; Don't auto-convert DOS mode
+(setq-default inhibit-eol-conversion t)
