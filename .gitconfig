@@ -31,6 +31,24 @@
     gnc = goodness --cached
     fa = fetch --all
     unstage = reset HEAD
+	switch = !legit switch \"$@\"
+	branches = !legit branches
+	sprout = !legit sprout \"$@\"
+	unpublish = !legit unpublish \"$@\"
+	harvest = !legit harvest \"$@\"
+	sync = !legit sync \"$@\"
+	publish = !legit publish \"$@\"
+	graft = !legit graft \"$@\"
 
 [format]
     pretty=format:%C(yellow)%h%Creset -%C(red)%d%Creset %s %Cgreen(%ar) %C(bold blue)<%an>%Creset
+
+[gitflow "branch"]
+         master = prod
+         develop = master
+[gitflow "prefix"]
+         feature = feature/
+         release = release/
+         hotfix = hotfix/
+         support = support/
+         versiontag =

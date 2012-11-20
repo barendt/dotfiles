@@ -100,3 +100,5 @@
 
 ;; Don't auto-convert DOS mode
 (setq-default inhibit-eol-conversion t)
+
+(setq js-indent-level 2)
